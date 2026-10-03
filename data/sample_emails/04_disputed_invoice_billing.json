@@ -1,0 +1,8 @@
+{
+  "id": "INV-DISP-88219",
+  "subject": "Discrepancy and double charge on Invoice #INV-2026-9041",
+  "from": "accounting@zenithdesign.studio",
+  "to": "billing@acmecorp.com",
+  "date": "Sat, 03 Oct 2026 08:12:44 +0000",
+  "body": "Hi Acme Billing,\n\nWe noticed that our credit card ending in 4109 was charged twice for $1,450 on October 1st for the annual Pro subscription renewal. We should have only been billed once.\n\nCould you please investigate this duplicate charge and issue a prompt refund for the second transaction?\n\nAttached is our credit card statement screenshot.\n\nThank you,\nSarah Lin\nController, Zenith Studio"
+}

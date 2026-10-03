@@ -1,0 +1,36 @@
+Subject: CRITICAL BREAK: Corporate Action Entitlement Discrepancy - $60,000
+ Variance on Fund Alpha (Event ID: CA884102)
+From: exceptions-team@northerntrust.com
+To: recon-escalations@apexcapital.com
+Date: Sat, 03 Oct 2026 10:15:30 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+URGENT ESCALATION: CORPORATE ACTIONS RECONCILIATION BREAK
+
+To: Corporate Actions Operations & Financial Controller
+From: Northern Trust Global Exception Management Desk
+
+Event ID: CA-884102
+Account: Apex Alpha Institutional Multi-Asset Fund (Acc: #NT-90812)
+Security: VODAFONE GROUP PLC (ISIN: GB00BH4HKS39)
+Event: Final Cash Dividend Payment
+
+Discrepancy Details:
+- Internal Accounting Expected Cash: USD 245,400.00
+- Custodian Credited Cash Amount: USD 185,400.00
+- NET UNRECONCILED BREAK: USD (60,000.00) NEGATIVE VARIANCE
+
+Root Cause Analysis:
+The custodian withholding tax module erroneously applied the non-treaty 30% s=
+tatutory withholding tax rate instead of the certified 15% Double Taxation Tr=
+eaty (DTT) rate specified in the fund's W-8BEN-E declaration on file.
+
+Immediate Operational Action Required:
+1. Open priority escalation ticket with Northern Trust Tax Operations.
+2. Provide certified Form W-8BEN-E treaty schedule re-verification.
+3. Obtain reclaim credit confirmation to prevent monthly NAV miscalculation.
+
+Status: UNRESOLVED / CRITICAL OPERATIONAL IMPACT
+Recon Desk Phone: +1 (312) 555-0199

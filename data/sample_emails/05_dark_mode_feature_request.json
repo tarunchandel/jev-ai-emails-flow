@@ -1,0 +1,8 @@
+{
+  "id": "FEAT-REQ-3011",
+  "subject": "Feature Request: Native Dark Mode and Keyboard Shortcuts in Dashboard",
+  "from": "dev-user@community-forum.org",
+  "to": "feedback@acmecorp.com",
+  "date": "Thu, 01 Oct 2026 14:05:00 +0000",
+  "body": "Hey team!\n\nLove using your product every day. One request: when working late in low light environments, the bright white dashboard gets tiring on the eyes. Would it be possible to add a native dark theme toggle and vim-style keyboard navigation for switching between pipelines?\n\nKeep up the great work!\nCheers,\nDave"
+}

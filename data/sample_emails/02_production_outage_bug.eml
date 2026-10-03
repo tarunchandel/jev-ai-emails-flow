@@ -1,0 +1,24 @@
+Subject:
+ URGENT: Checkout API returning 500 Internal Server Error for all users
+From: ops-lead@globalretail.com
+To: support@acmecorp.com
+Date: Sat, 03 Oct 2026 10:02:15 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Support,
+
+Since approximately 09:45 AM UTC, our customers are unable to complete any ch=
+eckout transactions. Every request to `/api/v2/payments/charge` fails with HT=
+TP 500.
+
+This is causing an active revenue loss of ~$15,000 per hour.
+
+Error excerpt:
+`NullPointerException at PaymentGatewayAdapter.java:142`
+
+Please engage your engineering on-call immediately.
+
+Regards,
+Alex Chen, Head of Engineering

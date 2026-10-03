@@ -1,0 +1,23 @@
+Subject:
+ CRITICAL: Potential unauthorized credential dump and database breach detected
+From: sec-alerts@external-watchdog.io
+To: security@acmecorp.com
+Date: Sat, 03 Oct 2026 09:15:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello Security Team,
+
+Our threat intelligence monitoring has detected plaintext API credentials and=
+ session tokens matching your production cluster on a public pastebin.
+
+Immediate action is recommended:
+1. Revoke the master API keys for cluster `us-east-prod-04`.
+2. Inspect audit logs for unauthorized exports during the last 6 hours.
+3. Lock down exposed endpoints immediately.
+
+Please acknowledge receipt as soon as possible.
+
+Best,
+Sentinel Threat Research Unit
