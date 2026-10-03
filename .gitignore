@@ -44,3 +44,14 @@ htmlcov/
 .vscode/
 *.swp
 *.swo
+
+# Mobile and Keystore secrets
+*.jks
+*.keystore
+keystore.properties
+google-play.json
+mobile/node_modules/
+mobile/dist/
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/local.properties

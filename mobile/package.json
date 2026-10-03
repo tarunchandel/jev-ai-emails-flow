@@ -1,0 +1,21 @@
+{
+  "name": "jev-ai-flow-mobile",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Jev AI Corporate Actions & Email Automation Mobile Demo",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/cli": "^6.2.1",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/status-bar": "^6.0.3"
+  }
+}

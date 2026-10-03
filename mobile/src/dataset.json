@@ -1,0 +1,439 @@
+[
+  {
+    "id": "eml-143dc750",
+    "subject": "Urgent: Action Required for ABC Corp Merger",
+    "sender": "proxy-alerts@custodian.com",
+    "body": "Please review the attached corporate proxy document for restructuring options.",
+    "date": "Sat, 03 Oct 2026 11:00:00 +0000",
+    "has_attachments": true,
+    "ocr_applied": true,
+    "ocr_extracted_text": "[DOCUMENT FLATTENED VIA GEMINI OCR: abc_corp_merger_proxy.pdf]\nEVENT TYPE: Mandatory with Choice / Merger Reorganization\nTARGET SECURITY: ABC CORP COMMON STOCK (ISIN: US0001234567 / CUSIP: 000123456)\nACQUIRER: DELTA TECH HOLDINGS LLC\nCONSIDERATION & ELECTION OPTIONS:\n  - Option 1 (All Cash): Elect $48.50 USD in cash per ABC Corp share\n  - Option 2 (Stock Alternative): Elect 1.15 Delta Tech common shares per share\n  - Option 3 (Default / Take No Action): Standard combination (50% cash / 50% shares)\nCRITICAL DEADLINES:\n  - Custodian Cutoff Deadline: 05-OCT-2026 17:00 EST\n  - Depository Expiration: 06-OCT-2026 12:00 EST\nOPERATIONAL INSTRUCTION: Solicit client election immediately. Cutoff is within 48 hours.",
+    "normalized_preview": "Please review the attached corporate proxy document for restructuring options.\n\n--- [FLATTENED ATTACHMENT TEXT (GEMINI VISION OCR)] ---\n[DOCUMENT FLATTENED VIA GEMINI OCR: abc_corp...",
+    "gate": {
+      "requires_heavy_ocr": true,
+      "ocr_probability": 0.94,
+      "reasoning": "Context lacks actionable dates/terms and explicitly points to an attached PDF or image file for full details.",
+      "latency_ms": 40.6
+    },
+    "decision": {
+      "event_type": "Merger_Acquisition",
+      "event_type_confidence": 0.96,
+      "is_actionable": true,
+      "is_actionable_probability": 0.95,
+      "urgency_score": 10,
+      "latency_ms": 60.6
+    },
+    "routing": {
+      "route": "GEMINI_CLIENT_NOTICE",
+      "client_notice": {
+        "subject": "[ACTION REQUIRED] Corporate Action Election Notice: Merger Acquisition (ISIN: US0001234567)",
+        "event_summary": "Mandatory/Voluntary Merger Acquisition event requiring active election.",
+        "recipient_role": "Valued Clients / Beneficial Owners",
+        "deadline": "05-OCT-2026 17:00 EST",
+        "election_options": [
+          "- Option 1 (All Cash): Elect $48.50 USD in cash per ABC Corp share",
+          "- Option 2 (Stock Alternative): Elect 1.15 Delta Tech common shares per share",
+          "- Option 3 (Default / Take No Action): Standard combination (50% cash / 50% shares)"
+        ],
+        "instructions": "Submit instructions prior to 05-OCT-2026 17:00 EST.",
+        "full_email_body": "Dear Valued Client,\n\nWe are writing to notify you of an upcoming corporate action event regarding your holdings:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nCORPORATE ACTION SUMMARY\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nEvent Type:         Merger Acquisition\nSecurity:           ISIN: US0001234567\nUrgency Priority:   10/10 (HIGH URGENCY)\nClient Cutoff Date: 05-OCT-2026 17:00 EST\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nAVAILABLE ELECTION OPTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n  \u2022 - Option 1 (All Cash): Elect $48.50 USD in cash per ABC Corp share\n  \u2022 - Option 2 (Stock Alternative): Elect 1.15 Delta Tech common shares per share\n  \u2022 - Option 3 (Default / Take No Action): Standard combination (50% cash / 50% shares)\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nACTION REQUIRED & RESPONSE INSTRUCTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Review the election options detailed above.\n2. Reply directly to this notification with your chosen Option number and designated quantity, OR log in to our Client Portal under 'Corporate Actions Elections'.\n3. All instructions must be received no later than 05-OCT-2026 17:00 EST.\n\nIMPORTANT: If no instructions are received prior to the client deadline, your position will default according to event terms (Option Default).\n\nPlease contact the Corporate Actions Desk at ca-desk@apexassetmgmt.com if you have any questions.\n\nSincerely,\nCorporate Actions Asset Servicing Desk\nApex Global Asset Management"
+      },
+      "hitl_item": null
+    },
+    "total_latency_ms": 106.0
+  },
+  {
+    "id": "eml-70d40fb4",
+    "subject": "URGENT ELECTION: Voluntary Tender Offer for Quantum Dynamics Corp (ISIN: US74765A1022) - Expiration 04-Oct-2026 17:00 EST",
+    "sender": "custody-notifications@bnymellon.com",
+    "body": "Dear Client,\n\nPlease be advised of an urgent VOLUNTARY CORPORATE ACTION regarding your holdings:\n\nSecurity: QUANTUM DYNAMICS CORP COM (ISIN: US74765A1022 / CUSIP: 74765A102)\nEvent Type: Voluntary Tender Offer / Takeover Bid\nOfferor: Hyperion Capital Holdings LLC\nConsideration: USD 54.00 Cash per Common Share, OR 1.25 Hyperion Common Shares (US449102108) per Share tendered.\n\n*** TIME CRITICAL ELECTION DEADLINE ***\nCustodian Cutoff Time: 04-OCT-2026 17:00 EST\nDepository Cutoff (DTCC): 05-OCT-2026 11:00 EST\n\nOptions Available:\n1. Cash Option: Elect USD 54.00 per share\n2. Stock Option: Elect 1.25 Hyperion shares per share\n3. Take No Action (Retain original Quantum Dynamics shares)\n\nDEFAULT OPTION: Option 3 (Take No Action / Do not tender)\n\nPlease submit your Portfolio Manager elections via the Corporate Actions Portal or return MT565 SWIFT instructions before the custodian cutoff. Failure to submit valid instructions by 17:00 EST will result in no action taken.\n\nCorporate Actions Custody Operations\nBNY Mellon Asset Servicing",
+    "date": "Sat, 03 Oct 2026 09:30:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "Dear Client,\n\nPlease be advised of an urgent VOLUNTARY CORPORATE ACTION regarding your holdings:\n\nSecurity: QUANTUM DYNAMICS CORP COM (ISIN: US74765A1022 / CUSIP: 74765A102)\nEvent ...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.5
+    },
+    "decision": {
+      "event_type": "Merger_Acquisition",
+      "event_type_confidence": 0.96,
+      "is_actionable": true,
+      "is_actionable_probability": 0.95,
+      "urgency_score": 10,
+      "latency_ms": 60.2
+    },
+    "routing": {
+      "route": "GEMINI_CLIENT_NOTICE",
+      "client_notice": {
+        "subject": "[ACTION REQUIRED] Corporate Action Election Notice: Merger Acquisition (ISIN: US74765A1022)",
+        "event_summary": "Mandatory/Voluntary Merger Acquisition event requiring active election.",
+        "recipient_role": "Valued Clients / Beneficial Owners",
+        "deadline": "04-OCT-2026 17:00 EST",
+        "election_options": [
+          "1. Cash Option: Elect USD 54.00 per share",
+          "2. Stock Option: Elect 1.25 Hyperion shares per share",
+          "3. Take No Action (Retain original Quantum Dynamics shares)"
+        ],
+        "instructions": "Submit instructions prior to 04-OCT-2026 17:00 EST.",
+        "full_email_body": "Dear Valued Client,\n\nWe are writing to notify you of an upcoming corporate action event regarding your holdings:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nCORPORATE ACTION SUMMARY\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nEvent Type:         Merger Acquisition\nSecurity:           ISIN: US74765A1022\nUrgency Priority:   10/10 (HIGH URGENCY)\nClient Cutoff Date: 04-OCT-2026 17:00 EST\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nAVAILABLE ELECTION OPTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n  \u2022 1. Cash Option: Elect USD 54.00 per share\n  \u2022 2. Stock Option: Elect 1.25 Hyperion shares per share\n  \u2022 3. Take No Action (Retain original Quantum Dynamics shares)\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nACTION REQUIRED & RESPONSE INSTRUCTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Review the election options detailed above.\n2. Reply directly to this notification with your chosen Option number and designated quantity, OR log in to our Client Portal under 'Corporate Actions Elections'.\n3. All instructions must be received no later than 04-OCT-2026 17:00 EST.\n\nIMPORTANT: If no instructions are received prior to the client deadline, your position will default according to event terms (Option Default).\n\nPlease contact the Corporate Actions Desk at ca-desk@apexassetmgmt.com if you have any questions.\n\nSincerely,\nCorporate Actions Asset Servicing Desk\nApex Global Asset Management"
+      },
+      "hitl_item": null
+    },
+    "total_latency_ms": 101.8
+  },
+  {
+    "id": "eml-63335126",
+    "subject": "MANDATORY CASH DIVIDEND: Novo Nordisk A/S (ISIN: DK0062498333) - Interim Dividend DKK 6.40",
+    "sender": "ca-announcements@euroclear.com",
+    "body": "EVENT NOTIFICATION: MANDATORY CORPORATE ACTION\n\nCorporate Action Reference: EU-DIV-2026-991204\nEvent Type: Mandatory Cash Dividend (DVCA)\nIssuer: NOVO NORDISK A/S (DK0062498333)\nMarket: Nasdaq Copenhagen (XCSE)\n\nEvent Key Dates:\n- Ex-Dividend Date: 10-OCT-2026\n- Record Date: 11-OCT-2026\n- Payment Date: 20-OCT-2026\n\nFinancial Terms:\n- Gross Dividend Rate: DKK 6.400000 per share\n- Statutory Withholding Tax: 27.0%\n- Net Rate: DKK 4.672000 per share\n- Currency: DKK (Danish Krone)\n\nProcessing Note:\nThis is a mandatory event requiring no shareholder election. Entitlements will be credited automatically to your clearing cash account on value date 20-OCT-2026. Please update fund accounting ledgers accordingly.\n\nEuroclear Corporate Action Operations",
+    "date": "Fri, 02 Oct 2026 14:15:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "EVENT NOTIFICATION: MANDATORY CORPORATE ACTION\n\nCorporate Action Reference: EU-DIV-2026-991204\nEvent Type: Mandatory Cash Dividend (DVCA)\nIssuer: NOVO NORDISK A/S (DK0062498333)\nMa...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.3
+    },
+    "decision": {
+      "event_type": "Cash_Dividend",
+      "event_type_confidence": 0.97,
+      "is_actionable": false,
+      "is_actionable_probability": 0.12,
+      "urgency_score": 4,
+      "latency_ms": 60.7
+    },
+    "routing": {
+      "route": "HUMAN_IN_THE_LOOP",
+      "client_notice": null,
+      "hitl_item": {
+        "queue_id": "HITL-56DA96",
+        "reason": "Informational Notice (No beneficial election required)",
+        "risk_level": "LOW",
+        "clarification_needed": "Verify entitlement schedule and auto-post to custody/accounting ledger.",
+        "suggested_action": "Auto-archive or verify automated entitlement schedule."
+      }
+    },
+    "total_latency_ms": 102.6
+  },
+  {
+    "id": "eml-8efbe08f",
+    "subject": "MANDATORY EVENT NOTICE: 3-for-1 Forward Stock Split for Titan Technologies Inc (CUSIP: 886732109)",
+    "sender": "corporateactions@dtcc.com",
+    "body": "THE DEPOSITORY TRUST & CLEARING CORPORATION (DTCC)\nMANDATORY CORPORATE ACTION NOTIFICATION\n\nNotice ID: DTCC-SPLIT-2026-5501\nEvent Type: Forward Stock Split (SPLF)\nSecurity Name: TITAN TECHNOLOGIES INC COM\nCUSIP: 886732109\nISIN: US8867321098\nExchange: NASDAQ\n\nTerms:\n- Split Ratio: 3 for 1 (2 additional shares distributed for each 1 share held)\n- Record Date: 12-OCT-2026\n- Payable / Distribution Date: 15-OCT-2026\n- Ex-Date (as determined by NASDAQ): 16-OCT-2026\n\nPosition Adjustment Instructions:\nHoldings on record date will automatically be multiplied by 3. Open orders on market trading venues will be adjusted per exchange rules. No action required from underlying beneficial owners. Security master team should update nominal share count and adjust historical per-share cost basis.\n\nDTCC Operations",
+    "date": "Sat, 03 Oct 2026 07:10:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "THE DEPOSITORY TRUST & CLEARING CORPORATION (DTCC)\nMANDATORY CORPORATE ACTION NOTIFICATION\n\nNotice ID: DTCC-SPLIT-2026-5501\nEvent Type: Forward Stock Split (SPLF)\nSecurity Name: TI...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.6
+    },
+    "decision": {
+      "event_type": "Ticker_Change",
+      "event_type_confidence": 0.93,
+      "is_actionable": false,
+      "is_actionable_probability": 0.18,
+      "urgency_score": 3,
+      "latency_ms": 60.7
+    },
+    "routing": {
+      "route": "HUMAN_IN_THE_LOOP",
+      "client_notice": null,
+      "hitl_item": {
+        "queue_id": "HITL-BA369E",
+        "reason": "Informational Notice (No beneficial election required)",
+        "risk_level": "LOW",
+        "clarification_needed": "Verify entitlement schedule and auto-post to custody/accounting ledger.",
+        "suggested_action": "Auto-archive or verify automated entitlement schedule."
+      }
+    },
+    "total_latency_ms": 102.9
+  },
+  {
+    "id": "eml-19ff05db",
+    "subject": "MANDATORY CORPORATE SPIN-OFF: Enterprise Holdings Inc spinning off CloudOps Solutions (Allocation Ratio: 0.25)",
+    "sender": "ca-syndicate@jpmorgan.com",
+    "body": "J.P. MORGAN GLOBAL ASSET SERVICING\nCORPORATE REORGANIZATION BULLETIN\n\nEvent Type: Mandatory Spin-Off (SOFF)\nParent Security: ENTERPRISE HOLDINGS INC (ISIN: US29364G1033 / CUSIP: 29364G103)\nSpin-Off Security: CLOUDOPS SOLUTIONS INC (New ISIN: US18905B1012 / CUSIP: 18905B101)\n\nTransaction Summary:\nEnterprise Holdings Inc is executing a tax-free spin-off of 100% of its CloudOps enterprise cloud software division.\n\nDistribution Terms:\n- Allocation Ratio: 0.250000 shares of CloudOps for every 1.000000 share of Enterprise Holdings held.\n- Fractional Shares: Fractional entitlements will not be issued; cash-in-lieu of fractional shares will be paid following post-spin trading volume weighted average price.\n- Ex-Date: 18-OCT-2026\n- Payment / Distribution Date: 24-OCT-2026\n\nOperational Requirement:\nData Management / Security Master team must establish the new security master record for CloudOps Solutions (US18905B1012) in OMS/PMS trading systems prior to the ex-date.\n\nJ.P. Morgan Custody Operations",
+    "date": "Fri, 02 Oct 2026 17:45:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "J.P. MORGAN GLOBAL ASSET SERVICING\nCORPORATE REORGANIZATION BULLETIN\n\nEvent Type: Mandatory Spin-Off (SOFF)\nParent Security: ENTERPRISE HOLDINGS INC (ISIN: US29364G1033 / CUSIP: 29...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.6
+    },
+    "decision": {
+      "event_type": "Ticker_Change",
+      "event_type_confidence": 0.93,
+      "is_actionable": false,
+      "is_actionable_probability": 0.18,
+      "urgency_score": 3,
+      "latency_ms": 60.5
+    },
+    "routing": {
+      "route": "HUMAN_IN_THE_LOOP",
+      "client_notice": null,
+      "hitl_item": {
+        "queue_id": "HITL-B8AEE4",
+        "reason": "Informational Notice (No beneficial election required)",
+        "risk_level": "LOW",
+        "clarification_needed": "Verify entitlement schedule and auto-post to custody/accounting ledger.",
+        "suggested_action": "Auto-archive or verify automated entitlement schedule."
+      }
+    },
+    "total_latency_ms": 102.8
+  },
+  {
+    "id": "eml-4a38000c",
+    "subject": "CRITICAL BREAK: Corporate Action Entitlement Discrepancy - $60,000 Variance on Fund Alpha (Event ID: CA884102)",
+    "sender": "exceptions-team@northerntrust.com",
+    "body": "URGENT ESCALATION: CORPORATE ACTIONS RECONCILIATION BREAK\n\nTo: Corporate Actions Operations & Financial Controller\nFrom: Northern Trust Global Exception Management Desk\n\nEvent ID: CA-884102\nAccount: Apex Alpha Institutional Multi-Asset Fund (Acc: #NT-90812)\nSecurity: VODAFONE GROUP PLC (ISIN: GB00BH4HKS39)\nEvent: Final Cash Dividend Payment\n\nDiscrepancy Details:\n- Internal Accounting Expected Cash: USD 245,400.00\n- Custodian Credited Cash Amount: USD 185,400.00\n- NET UNRECONCILED BREAK: USD (60,000.00) NEGATIVE VARIANCE\n\nRoot Cause Analysis:\nThe custodian withholding tax module erroneously applied the non-treaty 30% statutory withholding tax rate instead of the certified 15% Double Taxation Treaty (DTT) rate specified in the fund's W-8BEN-E declaration on file.\n\nImmediate Operational Action Required:\n1. Open priority escalation ticket with Northern Trust Tax Operations.\n2. Provide certified Form W-8BEN-E treaty schedule re-verification.\n3. Obtain reclaim credit confirmation to prevent monthly NAV miscalculation.\n\nStatus: UNRESOLVED / CRITICAL OPERATIONAL IMPACT\nRecon Desk Phone: +1 (312) 555-0199",
+    "date": "Sat, 03 Oct 2026 10:15:30 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "URGENT ESCALATION: CORPORATE ACTIONS RECONCILIATION BREAK\n\nTo: Corporate Actions Operations & Financial Controller\nFrom: Northern Trust Global Exception Management Desk\n\nEvent ID: ...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.9
+    },
+    "decision": {
+      "event_type": "Cash_Dividend",
+      "event_type_confidence": 0.97,
+      "is_actionable": false,
+      "is_actionable_probability": 0.12,
+      "urgency_score": 4,
+      "latency_ms": 60.6
+    },
+    "routing": {
+      "route": "HUMAN_IN_THE_LOOP",
+      "client_notice": null,
+      "hitl_item": {
+        "queue_id": "HITL-731BE5",
+        "reason": "Informational Notice (No beneficial election required)",
+        "risk_level": "LOW",
+        "clarification_needed": "Verify entitlement schedule and auto-post to custody/accounting ledger.",
+        "suggested_action": "Auto-archive or verify automated entitlement schedule."
+      }
+    },
+    "total_latency_ms": 102.7
+  },
+  {
+    "id": "eml-c42b2872",
+    "subject": "MANDATORY CAPITAL REDUCTION: Pacific Mining Corp (ISIN: AU000000PMC2) - Par Value Reduction",
+    "sender": "custodyservices@hsbc.com",
+    "body": "HSBC GLOBAL ASSET SERVICING\nMANDATORY CORPORATE EVENT NOTIFICATION\n\nEvent Type: Capital Reduction / Return of Capital (CAPR)\nSecurity: PACIFIC MINING CORP LTD (ISIN: AU000000PMC2 / ASX: PMC)\n\nDetails:\nFollowing shareholder and court approval, Pacific Mining Corp is undertaking an equal capital reduction:\n- Share capital reduction: Par value reduced from AUD 1.00 to AUD 0.20 per share\n- Cash return payment: AUD 0.80 per share returned to shareholders of record\n- Ex-Date: 22-OCT-2026\n- Record Date: 23-OCT-2026\n- Payment Date: 02-NOV-2026\n\nTax Treatment Note:\nReturn of capital will reduce the cost base of shares for capital gains tax purposes. Cash entitlement will be credited automatically. No shareholder election is required.\n\nHSBC Custody Operations Sydney",
+    "date": "Wed, 30 Sep 2026 13:20:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "HSBC GLOBAL ASSET SERVICING\nMANDATORY CORPORATE EVENT NOTIFICATION\n\nEvent Type: Capital Reduction / Return of Capital (CAPR)\nSecurity: PACIFIC MINING CORP LTD (ISIN: AU000000PMC2 /...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.4
+    },
+    "decision": {
+      "event_type": "Ticker_Change",
+      "event_type_confidence": 0.93,
+      "is_actionable": false,
+      "is_actionable_probability": 0.18,
+      "urgency_score": 3,
+      "latency_ms": 60.7
+    },
+    "routing": {
+      "route": "HUMAN_IN_THE_LOOP",
+      "client_notice": null,
+      "hitl_item": {
+        "queue_id": "HITL-8AB183",
+        "reason": "Informational Notice (No beneficial election required)",
+        "risk_level": "LOW",
+        "clarification_needed": "Verify entitlement schedule and auto-post to custody/accounting ledger.",
+        "suggested_action": "Auto-archive or verify automated entitlement schedule."
+      }
+    },
+    "total_latency_ms": 102.8
+  },
+  {
+    "id": "CA-RIGHTS-2026-7881",
+    "subject": "VOLUNTARY RIGHTS ISSUE: Apex Renewables PLC (ISIN: GB00B1YW4409) - Subscription Cutoff Approaching",
+    "sender": "global-custody@citi.com",
+    "body": "ATTENTION: CORPORATE ACTIONS TRADING DESK\n\nEvent Type: Voluntary Rights Offering (RHTS)\nSecurity: APEX RENEWABLES PLC ORD 10P (GB00B1YW4409)\nRights Security ISIN: GB00B88K3391 (Apex Renewables Nil-Paid Rights)\n\nRatio: 1 new ordinary share for every 4 existing shares held\nSubscription Price: 420.00 GBX per new ordinary share\n\nKey Deadlines:\n- Rights Trading Expiry: 05-OCT-2026 12:00 BST\n- Custodian Election Deadline: 06-OCT-2026 15:00 BST\n\nOptions:\nOption 1: Subscribe in full (exercise rights at 420p per share)\nOption 2: Apply for excess shares (subject to scaling)\nOption 3: Sell rights in the market before trading closes\nOption 4: Lapse / No action (Rights will lapse worthless)\n\nAction Required: Urgent instruction required from portfolio managers. Kindly confirm funds availability in settlement account for total subscription consideration.",
+    "date": "Sat, 03 Oct 2026 08:45:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "ATTENTION: CORPORATE ACTIONS TRADING DESK\n\nEvent Type: Voluntary Rights Offering (RHTS)\nSecurity: APEX RENEWABLES PLC ORD 10P (GB00B1YW4409)\nRights Security ISIN: GB00B88K3391 (Ape...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.5
+    },
+    "decision": {
+      "event_type": "Stock_Dividend",
+      "event_type_confidence": 0.91,
+      "is_actionable": true,
+      "is_actionable_probability": 0.94,
+      "urgency_score": 9,
+      "latency_ms": 60.4
+    },
+    "routing": {
+      "route": "GEMINI_CLIENT_NOTICE",
+      "client_notice": {
+        "subject": "[ACTION REQUIRED] Corporate Action Election Notice: Stock Dividend (ISIN: GB00B1YW4409)",
+        "event_summary": "Mandatory/Voluntary Stock Dividend event requiring active election.",
+        "recipient_role": "Valued Clients / Beneficial Owners",
+        "deadline": "05-OCT-2026 12:00 BST",
+        "election_options": [
+          "Option 1: Subscribe in full (exercise rights at 420p per share)",
+          "Option 2: Apply for excess shares (subject to scaling)",
+          "Option 3: Sell rights in the market before trading closes",
+          "Option 4: Lapse / No action (Rights will lapse worthless)"
+        ],
+        "instructions": "Submit instructions prior to 05-OCT-2026 12:00 BST.",
+        "full_email_body": "Dear Valued Client,\n\nWe are writing to notify you of an upcoming corporate action event regarding your holdings:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nCORPORATE ACTION SUMMARY\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nEvent Type:         Stock Dividend\nSecurity:           ISIN: GB00B1YW4409\nUrgency Priority:   9/10 (HIGH URGENCY)\nClient Cutoff Date: 05-OCT-2026 12:00 BST\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nAVAILABLE ELECTION OPTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n  \u2022 Option 1: Subscribe in full (exercise rights at 420p per share)\n  \u2022 Option 2: Apply for excess shares (subject to scaling)\n  \u2022 Option 3: Sell rights in the market before trading closes\n  \u2022 Option 4: Lapse / No action (Rights will lapse worthless)\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nACTION REQUIRED & RESPONSE INSTRUCTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Review the election options detailed above.\n2. Reply directly to this notification with your chosen Option number and designated quantity, OR log in to our Client Portal under 'Corporate Actions Elections'.\n3. All instructions must be received no later than 05-OCT-2026 12:00 BST.\n\nIMPORTANT: If no instructions are received prior to the client deadline, your position will default according to event terms (Option Default).\n\nPlease contact the Corporate Actions Desk at ca-desk@apexassetmgmt.com if you have any questions.\n\nSincerely,\nCorporate Actions Asset Servicing Desk\nApex Global Asset Management"
+      },
+      "hitl_item": null
+    },
+    "total_latency_ms": 101.7
+  },
+  {
+    "id": "PROXY-AGM-2026-094",
+    "subject": "SHAREHOLDER MEETING: Annual General Meeting (AGM) Proxy Ballot for Atlas Global PLC (ISIN: GB0000533153)",
+    "sender": "proxy-ballots@broadridge.com",
+    "body": "BROADRIDGE INVESTOR COMMUNICATION SOLUTIONS\nProxy Voting Notice & Shareholder Meeting Package\n\nMeeting: Annual General Meeting (AGM)\nIssuer: ATLAS GLOBAL PLC (ISIN: GB0000533153 / SEDOL: 0053315)\nMeeting Date: 16-OCT-2026 10:00 BST (London, UK)\nVoting Cutoff Date: 13-OCT-2026 17:00 BST\n\nKey Agenda Resolutions:\n- Resolution 1: Receive Annual Report & Financial Statements (Management Recommendation: FOR)\n- Resolution 2: Approve Directors' Remuneration Policy (Contested)\n- Resolution 3-7: Re-election of Independent Board Directors\n- Resolution 8: Re-appointment of Ernst & Young as Statutory Auditor\n- Resolution 12: Shareholder Sponsored Resolution: 2030 Climate Transition Scope 3 Emissions Disclosure\n\nPlease enter your stewardship voting instructions (FOR, AGAINST, ABSTAIN) via ProxyEdge or return ISO 20022 semt.020 / MT565 before the voting deadline.",
+    "date": "Thu, 01 Oct 2026 11:20:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "BROADRIDGE INVESTOR COMMUNICATION SOLUTIONS\nProxy Voting Notice & Shareholder Meeting Package\n\nMeeting: Annual General Meeting (AGM)\nIssuer: ATLAS GLOBAL PLC (ISIN: GB0000533153 / ...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.6
+    },
+    "decision": {
+      "event_type": "Spam_Or_Irrelevant",
+      "event_type_confidence": 0.72,
+      "is_actionable": true,
+      "is_actionable_probability": 0.85,
+      "urgency_score": 7,
+      "latency_ms": 60.6
+    },
+    "routing": {
+      "route": "GEMINI_CLIENT_NOTICE",
+      "client_notice": {
+        "subject": "[ACTION REQUIRED] Corporate Action Election Notice: Spam Or Irrelevant (ISIN: GB0000533153)",
+        "event_summary": "Mandatory/Voluntary Spam Or Irrelevant event requiring active election.",
+        "recipient_role": "Valued Clients / Beneficial Owners",
+        "deadline": "16-OCT-2026 10:00 BST",
+        "election_options": [
+          "Option 1: Cash Consideration / Standard Payout",
+          "Option 2: Securities / Stock Consideration",
+          "Option 3: Default (Take No Action / Mixed Allocation)"
+        ],
+        "instructions": "Submit instructions prior to 16-OCT-2026 10:00 BST.",
+        "full_email_body": "Dear Valued Client,\n\nWe are writing to notify you of an upcoming corporate action event regarding your holdings:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nCORPORATE ACTION SUMMARY\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nEvent Type:         Spam Or Irrelevant\nSecurity:           ISIN: GB0000533153\nUrgency Priority:   7/10 \nClient Cutoff Date: 16-OCT-2026 10:00 BST\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nAVAILABLE ELECTION OPTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n  \u2022 Option 1: Cash Consideration / Standard Payout\n  \u2022 Option 2: Securities / Stock Consideration\n  \u2022 Option 3: Default (Take No Action / Mixed Allocation)\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nACTION REQUIRED & RESPONSE INSTRUCTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Review the election options detailed above.\n2. Reply directly to this notification with your chosen Option number and designated quantity, OR log in to our Client Portal under 'Corporate Actions Elections'.\n3. All instructions must be received no later than 16-OCT-2026 10:00 BST.\n\nIMPORTANT: If no instructions are received prior to the client deadline, your position will default according to event terms (Option Default).\n\nPlease contact the Corporate Actions Desk at ca-desk@apexassetmgmt.com if you have any questions.\n\nSincerely,\nCorporate Actions Asset Servicing Desk\nApex Global Asset Management"
+      },
+      "hitl_item": null
+    },
+    "total_latency_ms": 102.1
+  },
+  {
+    "id": "CA-OPTDIV-2026-443",
+    "subject": "MANDATORY WITH CHOICE: Optional Dividend (Cash vs Scrip Shares) for TotalEnergies SE (ISIN: FR0000120271)",
+    "sender": "corporate-actions-desk@bnpparibas.com",
+    "body": "BNP PARIBAS SECURITIES SERVICES\nEVENT NOTIFICATION: OPTIONAL DIVIDEND / SCRIP ELECTION (DVOP)\n\nIssuer: TOTALENERGIES SE (ISIN: FR0000120271)\nEvent: Q3 2026 Interim Optional Dividend\n\nElection Options:\nOption 1: 100% Cash Dividend at EUR 0.79 per share\nOption 2: Scrip Dividend - Receive new ordinary shares at discounted subscription price EUR 58.20 per share\n\nDEFAULT OPTION: Option 1 (100% Cash)\n\nElection Deadlines:\n- Custodian Election Deadline: 14-OCT-2026 16:00 CET\n- Settlement / Payment Date: 26-OCT-2026\n\nAction Required: Solicit Portfolio Manager investment election between cash yield and equity compounding before the deadline.",
+    "date": "Thu, 01 Oct 2026 16:40:00 +0000",
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "BNP PARIBAS SECURITIES SERVICES\nEVENT NOTIFICATION: OPTIONAL DIVIDEND / SCRIP ELECTION (DVOP)\n\nIssuer: TOTALENERGIES SE (ISIN: FR0000120271)\nEvent: Q3 2026 Interim Optional Dividen...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.6
+    },
+    "decision": {
+      "event_type": "Stock_Dividend",
+      "event_type_confidence": 0.92,
+      "is_actionable": true,
+      "is_actionable_probability": 0.88,
+      "urgency_score": 6,
+      "latency_ms": 60.7
+    },
+    "routing": {
+      "route": "GEMINI_CLIENT_NOTICE",
+      "client_notice": {
+        "subject": "[ACTION REQUIRED] Corporate Action Election Notice: Stock Dividend (ISIN: FR0000120271)",
+        "event_summary": "Mandatory/Voluntary Stock Dividend event requiring active election.",
+        "recipient_role": "Valued Clients / Beneficial Owners",
+        "deadline": "14-OCT-2026 16:00 CET",
+        "election_options": [
+          "Option 1: 100% Cash Dividend at EUR 0.79 per share",
+          "Option 2: Scrip Dividend - Receive new ordinary shares at discounted subscription price EUR 58.20 per share"
+        ],
+        "instructions": "Submit instructions prior to 14-OCT-2026 16:00 CET.",
+        "full_email_body": "Dear Valued Client,\n\nWe are writing to notify you of an upcoming corporate action event regarding your holdings:\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nCORPORATE ACTION SUMMARY\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nEvent Type:         Stock Dividend\nSecurity:           ISIN: FR0000120271\nUrgency Priority:   6/10 \nClient Cutoff Date: 14-OCT-2026 16:00 CET\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nAVAILABLE ELECTION OPTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n  \u2022 Option 1: 100% Cash Dividend at EUR 0.79 per share\n  \u2022 Option 2: Scrip Dividend - Receive new ordinary shares at discounted subscription price EUR 58.20 per share\n\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\nACTION REQUIRED & RESPONSE INSTRUCTIONS\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n1. Review the election options detailed above.\n2. Reply directly to this notification with your chosen Option number and designated quantity, OR log in to our Client Portal under 'Corporate Actions Elections'.\n3. All instructions must be received no later than 14-OCT-2026 16:00 CET.\n\nIMPORTANT: If no instructions are received prior to the client deadline, your position will default according to event terms (Option Default).\n\nPlease contact the Corporate Actions Desk at ca-desk@apexassetmgmt.com if you have any questions.\n\nSincerely,\nCorporate Actions Asset Servicing Desk\nApex Global Asset Management"
+      },
+      "hitl_item": null
+    },
+    "total_latency_ms": 101.9
+  },
+  {
+    "id": "txt-4142f3df",
+    "subject": "[EXCLUSIVE] 1000% APY Guaranteed with our Institutional Arbitrage Algo! Book Demo Now",
+    "sender": "crypto-quant-alpha@hyperbot-yield.biz",
+    "body": "Attention Fund Operations Manager,\n\nAre you leaving yield on the table? Our proprietary high-frequency AI bot scalps cross-exchange cryptocurrency spreads with 99.8% win rate and zero drawdown risk!\n\nWe are onboarding a strictly limited cohort of 10 family offices and hedge funds this quarter.\n\nClick here to reserve your private institutional onboarding call: https://bit.ly/crypto-scam-arbitrage-772\n\nReply UNSUBSCRIBE to stop receiving our daily high-yield opportunities.",
+    "date": null,
+    "has_attachments": false,
+    "ocr_applied": false,
+    "ocr_extracted_text": "",
+    "normalized_preview": "Attention Fund Operations Manager,\n\nAre you leaving yield on the table? Our proprietary high-frequency AI bot scalps cross-exchange cryptocurrency spreads with 99.8% win rate and z...",
+    "gate": {
+      "requires_heavy_ocr": false,
+      "ocr_probability": 0.08,
+      "reasoning": "Complete corporate action terms and dates are present in raw text body; no OCR required.",
+      "latency_ms": 40.4
+    },
+    "decision": {
+      "event_type": "Spam_Or_Irrelevant",
+      "event_type_confidence": 0.95,
+      "is_actionable": false,
+      "is_actionable_probability": 0.02,
+      "urgency_score": 1,
+      "latency_ms": 60.3
+    },
+    "routing": {
+      "route": "HUMAN_IN_THE_LOOP",
+      "client_notice": null,
+      "hitl_item": {
+        "queue_id": "HITL-17CE92",
+        "reason": "Informational Notice (No beneficial election required)",
+        "risk_level": "INFO",
+        "clarification_needed": "Verify entitlement schedule and auto-post to custody/accounting ledger.",
+        "suggested_action": "Auto-archive or verify automated entitlement schedule."
+      }
+    },
+    "total_latency_ms": 101.1
+  }
+]

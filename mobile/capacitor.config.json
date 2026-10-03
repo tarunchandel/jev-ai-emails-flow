@@ -1,0 +1,9 @@
+{
+  "appId": "com.genaiapps.jevaiflow",
+  "appName": "Jev AI Flow",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  }
+}
