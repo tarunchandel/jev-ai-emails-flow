@@ -1,12 +1,16 @@
 import urllib.request
 import urllib.error
 import json
+import os
 import sys
 from google.oauth2 import service_account
 from google.auth.transport.requests import Request
 
 PACKAGE_NAME = "com.genaiapps.jevaiflow"
 KEY_FILE = r"mobile/android/google-play.json"
+AAB_FILE = r"releases/jev-ai-flow-v1.0.3-release.aab"
+TARGET_VERSION_CODE = 4
+TARGET_VERSION_NAME = "1.0.3"
 SCOPES = ["https://www.googleapis.com/auth/androidpublisher"]
 
 def get_auth_token():
@@ -17,12 +21,21 @@ def get_auth_token():
     creds.refresh(Request())
     return creds.token
 
-def make_request(url, method="GET", data=None, token=None):
+def make_request(url, method="GET", data=None, token=None, content_type="application/json"):
     headers = {
         "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json"
     }
-    body = json.dumps(data).encode("utf-8") if data is not None else None
+    if content_type:
+        headers["Content-Type"] = content_type
+
+    if isinstance(data, (dict, list)):
+        body = json.dumps(data).encode("utf-8")
+    elif isinstance(data, bytes):
+        body = data
+        headers["Content-Length"] = str(len(data))
+    else:
+        body = None
+
     req = urllib.request.Request(url, data=body, headers=headers, method=method)
     try:
         with urllib.request.urlopen(req) as resp:
@@ -33,7 +46,7 @@ def make_request(url, method="GET", data=None, token=None):
         print(f"HTTPError {e.code} on {method} {url}:\n{err_msg}", file=sys.stderr)
         raise
 
-def update_tracks():
+def deploy_to_play_store():
     token = get_auth_token()
     print("[OK] OAuth2 access token acquired.")
 
@@ -47,7 +60,7 @@ def update_tracks():
     edit_id = edit_resp["id"]
     print(f"[OK] Edit created: {edit_id}")
 
-    # 2. List bundles to verify versionCode 3 is present
+    # 2. Check existing bundles in edit
     bundles = make_request(
         f"https://androidpublisher.googleapis.com/androidpublisher/v3/applications/{PACKAGE_NAME}/edits/{edit_id}/bundles",
         token=token
@@ -55,30 +68,50 @@ def update_tracks():
     version_codes = [b["versionCode"] for b in bundles.get("bundles", [])]
     print(f"[OK] Existing bundles in edit: {version_codes}")
 
+    # 3. Upload AAB if target version code is not in this edit
+    if TARGET_VERSION_CODE not in version_codes:
+        print(f"Uploading {AAB_FILE} (versionCode: {TARGET_VERSION_CODE})...")
+        if not os.path.exists(AAB_FILE):
+            raise FileNotFoundError(f"Bundle not found: {AAB_FILE}")
+        with open(AAB_FILE, "rb") as f:
+            aab_bytes = f.read()
+
+        upload_url = f"https://androidpublisher.googleapis.com/upload/androidpublisher/v3/applications/{PACKAGE_NAME}/edits/{edit_id}/bundles?uploadType=media"
+        upload_resp = make_request(
+            upload_url,
+            method="POST",
+            data=aab_bytes,
+            token=token,
+            content_type="application/octet-stream"
+        )
+        print(f"[OK] Bundle uploaded successfully! VersionCode: {upload_resp.get('versionCode')} (SHA256: {upload_resp.get('sha256')})")
+    else:
+        print(f"[OK] Bundle with versionCode {TARGET_VERSION_CODE} already present in edit.")
+
     release_notes = [
         {
             "language": "en-US",
-            "text": "Jev AI Corporate Actions v1.0.2: Redesigned touch UI matching Priority Queue with Urgency badges, 4-Stage Flow Architecture, and Gemini Client Notice election drafting."
+            "text": f"Jev AI Corporate Actions v{TARGET_VERSION_NAME}: Added light/dark theme switch, smooth animated bottom navigation, interactive toast notifications, debounced search filters, and SLA latency metrics."
         },
         {
             "language": "en-GB",
-            "text": "Jev AI Corporate Actions v1.0.2: Redesigned touch UI matching Priority Queue with Urgency badges, 4-Stage Flow Architecture, and Gemini Client Notice election drafting."
+            "text": f"Jev AI Corporate Actions v{TARGET_VERSION_NAME}: Added light/dark theme switch, smooth animated bottom navigation, interactive toast notifications, debounced search filters, and SLA latency metrics."
         }
     ]
 
-    # 3. Update 'internal' track with version code 3
+    # 4. Update 'internal' track with version code
     internal_track_data = {
         "track": "internal",
         "releases": [
             {
-                "name": "1.0.2",
-                "versionCodes": ["3"],
+                "name": TARGET_VERSION_NAME,
+                "versionCodes": [str(TARGET_VERSION_CODE)],
                 "status": "completed",
                 "releaseNotes": release_notes
             }
         ]
     }
-    print("Updating 'internal' track with version code 3...")
+    print(f"Updating 'internal' track with versionCode {TARGET_VERSION_CODE}...")
     internal_resp = make_request(
         f"https://androidpublisher.googleapis.com/androidpublisher/v3/applications/{PACKAGE_NAME}/edits/{edit_id}/tracks/internal",
         method="PUT",
@@ -87,15 +120,14 @@ def update_tracks():
     )
     print(f"[OK] 'internal' track updated successfully: {internal_resp.get('track')}")
 
-    # 4. Update 'alpha' (Closed Testing) track with version code 3
-    # Try status 'completed', or fallback to 'draft' if draft app restriction applies
+    # 5. Update 'alpha' (Closed Testing) track with version code
     alpha_status = "completed"
     alpha_track_data = {
         "track": "alpha",
         "releases": [
             {
-                "name": "1.0.2 (Closed Testing Alpha)",
-                "versionCodes": ["3"],
+                "name": f"{TARGET_VERSION_NAME} (Closed Testing)",
+                "versionCodes": [str(TARGET_VERSION_CODE)],
                 "status": alpha_status,
                 "releaseNotes": release_notes
             }
@@ -121,7 +153,7 @@ def update_tracks():
         )
         print(f"[OK] 'alpha' track updated successfully with status 'draft': {alpha_resp.get('track')}")
 
-    # 5. Commit the edit to Google Play Console
+    # 6. Commit the edit to Google Play Console
     print("Committing edit to Google Play Console...")
     commit_resp = make_request(
         f"https://androidpublisher.googleapis.com/androidpublisher/v3/applications/{PACKAGE_NAME}/edits/{edit_id}:commit",
@@ -131,7 +163,7 @@ def update_tracks():
     )
     print(f"[OK] Edit committed successfully! Edit ID: {commit_resp.get('id')}")
 
-    # 6. Verify tracks after commit
+    # 7. Verify tracks after commit
     token = get_auth_token()
     new_edit = make_request(
         f"https://androidpublisher.googleapis.com/androidpublisher/v3/applications/{PACKAGE_NAME}/edits",
@@ -149,4 +181,4 @@ def update_tracks():
             print(f"- Track '{trk['track']}': {json.dumps(trk['releases'], indent=2)}")
 
 if __name__ == "__main__":
-    update_tracks()
+    deploy_to_play_store()
