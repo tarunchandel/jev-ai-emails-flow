@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Jev AI Corporate Actions Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --secondary: #06b6d4;
+            --accent-emerald: #10b981;
+            --bg: #090d16;
+            --card-bg: rgba(18, 24, 38, 0.85);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.10) 0px, transparent 50%);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 840px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo-badge {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .summary-box {
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 36px;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .summary-box strong {
+            color: var(--primary-light);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 8px;
+        }
+
+        h2 .section-num {
+            color: var(--primary-light);
+            font-size: 0.95rem;
+            font-weight: 800;
+        }
+
+        p {
+            color: var(--text-sub);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+
+        li {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary-light);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 8px;
+            top: -2px;
+        }
+
+        .code-pill {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--secondary);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .highlight-card {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .highlight-card h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .highlight-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px;
+            }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-badge">⚡</div>
+            <h1>Privacy Policy</h1>
+            <div class="meta">
+                <strong>Application:</strong> Jev AI Corporate Actions Flow (<span class="code-pill">com.genaiapps.jevaiflow</span>)<br>
+                <strong>Effective Date:</strong> October 3, 2026 • <strong>Version:</strong> 1.0.1
+            </div>
+        </header>
+
+        <div class="summary-box">
+            <strong>Key Privacy Guarantee:</strong> Jev AI Corporate Actions Flow is designed with privacy and operational confidentiality at its core. The mobile application operates with local execution and demo sandbox datasets, and <strong>does not collect, track, or sell your personal information or contact details</strong>.
+        </div>
+
+        <h2><span class="section-num">01.</span> Overview & Scope</h2>
+        <p>
+            This Privacy Policy describes the policies and practices regarding the collection, use, and disclosure of information through the <strong>Jev AI Corporate Actions Flow</strong> mobile application (the "App") developed by <strong>GenAi Apps</strong> ("we", "us", or "our").
+        </p>
+        <p>
+            The App serves as an intelligent corporate actions email parsing, document OCR, and decision workflow platform powered by TypeSafe AI's Jev System One decision engine and Google Gemini.
+        </p>
+
+        <h2><span class="section-num">02.</span> Information Collection and Processing</h2>
+        <p>
+            We adhere to strict data minimization principles:
+        </p>
+
+        <div class="highlight-grid">
+            <div class="highlight-card">
+                <h3>🚫 No Personal Identification</h3>
+                <p>We do not collect names, phone numbers, email contact lists, or account credentials from your device.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>🔒 Local Demo Environment</h3>
+                <p>Benchmark financial corporate actions data is processed in a standalone local sandbox on the mobile device.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>📍 No Geolocation Tracking</h3>
+                <p>The App does not access, query, or log your precise or coarse geographic location.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>🚫 No Advertising Identifiers</h3>
+                <p>The App contains zero advertising SDKs, marketing trackers, or third-party behavioral analytics.</p>
+            </div>
+        </div>
+
+        <h2><span class="section-num">03.</span> Device Permissions & Technical Data</h2>
+        <p>The App requests only the technical permissions necessary for its intended functionality:</p>
+        <ul>
+            <li><strong>INTERNET (<span class="code-pill">android.permission.INTERNET</span>):</strong> Required to communicate with optional backend endpoints, retrieve software updates, and execute remote AI decision requests when Live API mode is explicitly engaged.</li>
+            <li><strong>ACCESS_NETWORK_STATE:</strong> Used solely to detect whether the device is currently online or offline, dynamically activating the Standalone Offline Demo Mode.</li>
+        </ul>
+
+        <h2><span class="section-num">04.</span> Artificial Intelligence and Data Transmission</h2>
+        <p>
+            When utilizing live decision engine features:
+        </p>
+        <ul>
+            <li>Corporate action notifications are processed using enterprise-grade API connections protected by Transport Layer Security (TLS 1.3 encryption).</li>
+            <li>Data processed via our integration with TypeSafe AI (Jev System One) and Google Gemini is utilized exclusively for real-time document OCR and structured decision generation, and is <strong>not</strong> utilized to train general public models.</li>
+        </ul>
+
+        <h2><span class="section-num">05.</span> Google Play Services & Diagnostics</h2>
+        <p>
+            As distributed through the Google Play Store, anonymous technical crash reports and installation telemetry may be aggregated by Google Play Console services to help us ensure stability, backwards compatibility across Android versions, and bug resolution.
+        </p>
+
+        <h2><span class="section-num">06.</span> Children's Privacy</h2>
+        <p>
+            The App is designed as a financial operations and enterprise productivity tool targeted at adult business professionals (ages 18 and older). We do not knowingly collect information from children under 13 years of age.
+        </p>
+
+        <h2><span class="section-num">07.</span> Security Measures</h2>
+        <p>
+            We implement administrative and technical security measures designed to protect information from unauthorized access, loss, misuse, or alteration. All cryptographic application bundles are signed using industry-standard RSA certificate signing.
+        </p>
+
+        <h2><span class="section-num">08.</span> Changes to This Privacy Policy</h2>
+        <p>
+            We may periodically update this policy to reflect operational, legal, or regulatory updates. Any changes will be posted on this page with an updated Effective Date.
+        </p>
+
+        <h2><span class="section-num">09.</span> Contact Us</h2>
+        <p>
+            If you have questions, feedback, or inquiries regarding this Privacy Policy or our privacy practices, please contact us at:
+        </p>
+        <ul>
+            <li><strong>Developer:</strong> GenAi Apps</li>
+            <li><strong>Email:</strong> <a href="mailto:support@genaiapps.dev" style="color: var(--primary-light);">support@genaiapps.dev</a></li>
+            <li><strong>Repository:</strong> <a href="https://github.com/tarunchandel/jev-ai-emails-flow" target="_blank" style="color: var(--secondary);">github.com/tarunchandel/jev-ai-emails-flow</a></li>
+        </ul>
+
+        <footer>
+            © 2026 GenAi Apps. All rights reserved. • <a href="https://github.com/tarunchandel/jev-ai-emails-flow">Jev AI Corporate Actions Flow</a>
+        </footer>
+    </div>
+</body>
+
+</html>
