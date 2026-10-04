@@ -214,3 +214,56 @@ def test_batch_processing_and_urgency_sorting():
     # Bottom item must be lowest urgency (spam)
     assert results[-1].email_id == "spam"
     assert results[-1].core_decision.urgency_score == 1
+
+
+def test_audit_trail_and_3_questions_answered():
+    """Verify that all 3 questions answered by Jev AI are captured in the audit trail with options, AI selections, scores, and actions taken."""
+    orchestrator = CorporateActionsFlowOrchestrator()
+
+    email = EmailMessage(
+        id="audit-test-01",
+        sender="proxy-alerts@custodian.com",
+        subject="Urgent: Action Required for ABC Corp Merger",
+        body="Please review the attached corporate proxy document for restructuring options.",
+        attachments=[EmailAttachment(filename="abc_corp_merger_proxy.pdf")],
+    )
+
+    res = orchestrator.process_email(email)
+
+    # 1. Audit trail must exist and have 6 steps
+    assert res.audit_trail is not None
+    assert len(res.audit_trail) >= 6
+
+    # 2. Stage 1 Ingestion Gate
+    gate_step = next(s for s in res.audit_trail if s.step == 1)
+    assert "requires_heavy_ocr" in gate_step.question
+    assert gate_step.primitive == "Noul"
+    assert gate_step.selected_option == "Requires Heavy OCR"
+    assert len(gate_step.options) == 2
+    assert "Gemini Vision OCR" in gate_step.action_taken
+
+    # 3. Stage 3 Question 1: CA Event Type (Choice)
+    q1_step = next(s for s in res.audit_trail if s.step == 3)
+    assert q1_step.primitive == "Choice"
+    assert "event_type" in q1_step.question
+    assert len(q1_step.options) == 5
+    assert q1_step.selected_option == "Merger_Acquisition"
+    assert "Merger_Acquisition" in q1_step.scores
+    assert len(q1_step.action_taken) > 0
+
+    # 4. Stage 3 Question 2: Is Actionable? (Noul)
+    q2_step = next(s for s in res.audit_trail if s.step == 4)
+    assert q2_step.primitive == "Noul"
+    assert "is_actionable" in q2_step.question
+    assert q2_step.selected_option == "True (Action Required)"
+    assert len(q2_step.options) == 2
+    assert "ACTION REQUIRED" in q2_step.action_taken
+
+    # 5. Stage 3 Question 3: Urgency Score (Score 1-10)
+    q3_step = next(s for s in res.audit_trail if s.step == 5)
+    assert q3_step.primitive == "Score"
+    assert "urgency" in q3_step.question
+    assert len(q3_step.options) == 10
+    assert q3_step.selected_score == "10/10"
+    assert "TOP of the Operational Queue" in q3_step.action_taken
+

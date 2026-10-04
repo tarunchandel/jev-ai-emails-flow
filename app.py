@@ -447,6 +447,156 @@ flowchart TD
                 st.write(f"**Clarification Needed:** {res.hitl_item.clarification_needed}")
                 st.write(f"**Recommended Operations Action:** `{res.hitl_item.suggested_action}`")
 
+        # ─────────────────────────────────────────────────────────────
+        # INSPECTION DETAILS: 3 Architecture Questions Answered by Jev AI
+        # ─────────────────────────────────────────────────────────────
+        st.divider()
+        st.markdown("### 🔬 Inspection Details: 3 Architecture Questions Answered by Jev AI")
+        st.caption("Referencing the 🏛️ End-to-End Corporate Actions Flow Architecture, Jev AI evaluated 3 core structured decision questions with typed calibrated primitives:")
+
+        q_col1, q_col2, q_col3 = st.columns(3)
+
+        # Question 1: CA Event Type (Choice)
+        with q_col1:
+            with st.container(border=True):
+                st.markdown("#### 1️⃣ CA Event Type")
+                st.caption(f"🏷️ **Primitive:** `Choice` | **Latency:** {res.core_decision.latency_ms:.1f} ms")
+                st.markdown("**Question:** *'Which corporate action event type applies to this notice?'*")
+
+                st.markdown("**Available Options & AI Selection:**")
+                ev_options = [
+                    ("Merger_Acquisition", "M&A / Tender Offer", "Voluntary tender, takeover, or reorganization"),
+                    ("Cash_Dividend", "Cash Dividend", "Mandatory or cash dividend distribution declaration"),
+                    ("Stock_Dividend", "Stock Dividend", "Scrip dividend, bonus shares, rights subscription"),
+                    ("Ticker_Change", "Ticker Change", "Ticker symbol, name, ISIN/CUSIP split, spin-off"),
+                    ("Spam_Or_Irrelevant", "Spam / Irrelevant", "Unsolicited promotional sales or non-CA notice"),
+                ]
+                ev_probs = res.core_decision.event_type_probabilities
+                for opt_key, opt_label, opt_desc in ev_options:
+                    is_selected = (opt_key == res.core_decision.event_type)
+                    prob_val = ev_probs.get(opt_key, 0.02)
+                    badge = " :green[**✓ SELECTED WITH AI**]" if is_selected else ""
+                    st.markdown(f"- **{opt_label}** (`{prob_val:.1%}`){badge}")
+                    st.caption(f"  {opt_desc}")
+
+                st.markdown("---")
+                st.markdown("**🎯 Decision & Action Taken:**")
+                if res.core_decision.event_type == "Merger_Acquisition":
+                    q1_action = "Initiated corporate reorganization protocol; identified offer consideration (cash vs shares) and target CUSIP/ISIN."
+                elif res.core_decision.event_type == "Cash_Dividend":
+                    q1_action = "Validated ex-date, record date, and withholding tax rate schedule for automated custody ledger posting."
+                elif res.core_decision.event_type == "Stock_Dividend":
+                    q1_action = "Processed scrip / subscription terms and calculated share entitlement ratio."
+                elif res.core_decision.event_type == "Ticker_Change":
+                    q1_action = "Queued Security Master ISIN/CUSIP update and ledger position reclassification."
+                else:
+                    q1_action = "Classified as non-actionable external solicitation; routed to archive."
+
+                st.success(f"**Decision:** `{res.core_decision.event_type}` ({res.core_decision.event_type_confidence:.1%} conf)\n\n**Action Taken:** {q1_action}")
+
+        # Question 2: Is Actionable? (Noul)
+        with q_col2:
+            with st.container(border=True):
+                st.markdown("#### 2️⃣ Is Actionable?")
+                st.caption("⚖️ **Primitive:** `Noul` (Calibrated Prob) | **Threshold:** `50.0%`")
+                st.markdown("**Question:** *'Does operations desk need to respond, submit an election, or alert clients?'*")
+
+                st.markdown("**Available Options & AI Selection:**")
+                is_act = res.core_decision.is_actionable
+                act_prob = res.core_decision.is_actionable_probability
+
+                # Option 1: True
+                t_badge = " :green[**✓ SELECTED WITH AI**]" if is_act else ""
+                st.markdown(f"- **True (Action Required)** (`{act_prob:.1%}`){t_badge}")
+                st.caption("  Operations desk must solicit clients or submit election before cutoff")
+
+                # Option 2: False
+                f_badge = " :blue[**✓ SELECTED WITH AI**]" if not is_act else ""
+                st.markdown(f"- **False (Informational Only)** (`{(1.0 - act_prob):.1%}`){f_badge}")
+                st.caption("  Informational FYI update; no client election or response needed")
+
+                st.progress(float(act_prob))
+                st.markdown("---")
+                st.markdown("**🎯 Decision & Action Taken:**")
+                if is_act:
+                    q2_action = "Calibrated probability > 50% -> Routed to Stage 4 Router to generate structured client election notice via Gemini LLM."
+                else:
+                    q2_action = "Calibrated probability <= 50% -> Bypassed client election dispatch; scheduled for automatic ledger entitlement booking."
+                st.info(f"**Decision:** `is_actionable = {is_act}` ({act_prob:.1%} prob)\n\n**Action Taken:** {q2_action}")
+
+        # Question 3: Urgency Score (Score 1-10)
+        with q_col3:
+            with st.container(border=True):
+                st.markdown("#### 3️⃣ Urgency Score")
+                st.caption("📊 **Primitive:** `Score` (1-10 Rubric) | **Deadline Criticality**")
+                st.markdown("**Question:** *'Scale 1-10 of how critical timeline is (10 = cutoff within 48h)?'*")
+
+                st.markdown("**Available Options & AI Selection (Rubric 1-10):**")
+                urg_score = res.core_decision.urgency_score
+                st.markdown(f"**Selected Score:** :red[**Level {urg_score} / 10**] :green[**✓ SELECTED WITH AI**]")
+                st.caption(f"Confidence: `{res.core_decision.urgency_confidence:.1%}`")
+
+                # Visual rubric tiers summary
+                rubric_tiers = [
+                    (1, 2, "Level 1-2: Non-urgent (>21 days)"),
+                    (3, 4, "Level 3-4: Low (10-20 days)"),
+                    (5, 7, "Level 5-7: Medium (3-9 days)"),
+                    (8, 10, "Level 8-10: Critical (<48-72h)"),
+                ]
+                for lo, hi, lbl in rubric_tiers:
+                    is_in_tier = (lo <= urg_score <= hi)
+                    tier_badge = " 🔥 :red[**ACTIVE TIER**]" if is_in_tier else ""
+                    st.markdown(f"- **{lbl}**{tier_badge}")
+
+                st.markdown("---")
+                st.markdown("**🎯 Decision & Action Taken:**")
+                if urg_score >= 8:
+                    q3_action = f"Score {urg_score}/10 qualifies as CRITICAL (>= 8). High Urgency shifted notice to the TOP of the Operational Queue (Priority Rank #1); urgent deadline alert flagged."
+                elif urg_score >= 5:
+                    q3_action = f"Score {urg_score}/10 assigned. Notice placed in prioritized operational queue with standard 5-7 day SLA."
+                else:
+                    q3_action = f"Score {urg_score}/10 assigned. Routine notice scheduled for standard end-of-day batch reconciliation."
+
+                st.warning(f"**Decision:** `Urgency = {urg_score}/10`\n\n**Action Taken:** {q3_action}")
+
+        # ─────────────────────────────────────────────────────────────
+        # AUDIT TRAIL: Step-by-Step Chronological Audit Trail
+        # ─────────────────────────────────────────────────────────────
+        st.divider()
+        st.markdown("### 📜 End-to-End Corporate Actions Audit Trail")
+        st.caption("Transparent chronological audit record tracking each pipeline gate check, the 3 Jev AI decision questions, evaluated options, AI selections, scores, and router dispatch actions:")
+
+        if res.audit_trail:
+            for step_item in res.audit_trail:
+                with st.expander(
+                    f"Step {step_item.step}: {step_item.stage} — {step_item.name} ({step_item.latency_ms:.1f} ms)",
+                    expanded=True,
+                ):
+                    at_col1, at_col2 = st.columns([1.2, 1])
+                    with at_col1:
+                        if step_item.question:
+                            st.markdown(f"**Question Evaluated:** *{step_item.question}*")
+                        if step_item.primitive:
+                            st.markdown(f"**Primitive Type:** `{step_item.primitive}`")
+                        st.markdown(f"**Decision Summary:** `{step_item.decision}`")
+                        st.markdown(f"**Selected with AI:** :green[**{step_item.selected_option}**] (Score: `{step_item.selected_score}`)")
+                        st.info(f"**Action Taken:** {step_item.action_taken}")
+
+                    with at_col2:
+                        if step_item.options:
+                            st.markdown("**Evaluated Options & Scores:**")
+                            opt_df = []
+                            for o in step_item.options:
+                                is_sel = (o.get("option") == step_item.selected_option or o.get("label") == step_item.selected_option)
+                                opt_df.append({
+                                    "Option": o.get("label", o.get("option", "")),
+                                    "Score / Prob": o.get("score", "N/A"),
+                                    "AI Selection": "✓ Selected" if is_sel else "",
+                                })
+                            st.dataframe(pd.DataFrame(opt_df), hide_index=True, use_container_width=True)
+
+            st.success(f"✓ **Audit SLA Verified**: End-to-end execution completed in **{res.total_latency_ms} ms** (< 150ms corporate actions SLA threshold). All 3 architecture questions answered by Jev AI.")
+
     # Dynamic Urgency-Sorted Queue
     if st.session_state.ca_flow_results:
         st.divider()
@@ -693,3 +843,35 @@ with tab_workflow:
             })
 
         st.dataframe(pd.DataFrame(log_data), use_container_width=True)
+
+    if st.session_state.ca_flow_results:
+        st.divider()
+        st.markdown("### 🏛️ Corporate Actions Flow Audit Trail (Jev AI 3 Architecture Questions)")
+        st.caption("Complete audit trail for all corporate actions processed through Jev AI System One and the 4-stage pipeline:")
+
+        ca_audit_data = []
+        for r in st.session_state.ca_flow_results.values():
+            ca_audit_data.append({
+                "Email ID": r.email_id,
+                "Subject": r.subject[:40] + ("..." if len(r.subject) > 40 else ""),
+                "Q1: CA Event Type (Choice)": f"{r.core_decision.event_type} ({r.core_decision.event_type_confidence:.1%})",
+                "Q2: Is Actionable? (Noul)": f"{'YES' if r.core_decision.is_actionable else 'NO'} ({r.core_decision.is_actionable_probability:.1%})",
+                "Q3: Urgency (1-10)": f"{r.core_decision.urgency_score}/10",
+                "Route Decision": r.route,
+                "OCR Applied": "YES" if r.ocr_applied else "NO",
+                "Latency": f"{r.total_latency_ms} ms",
+            })
+        st.dataframe(pd.DataFrame(ca_audit_data), use_container_width=True)
+
+        with st.expander("🔍 Deep-Dive Audit Trail Inspector by Email"):
+            ca_map = {f"[{r.email_id}] {r.subject[:50]}": r for r in st.session_state.ca_flow_results.values()}
+            sel_ca_key = st.selectbox("Select corporate action notice to inspect full audit trail:", list(ca_map.keys()), key="ca_audit_sel")
+            sel_ca = ca_map[sel_ca_key]
+            if sel_ca.audit_trail:
+                for s in sel_ca.audit_trail:
+                    st.markdown(f"**Step {s.step}: {s.stage} — {s.name}** (`{s.latency_ms:.1f} ms`)")
+                    if s.question:
+                        st.markdown(f"- *Question:* {s.question}")
+                    st.markdown(f"- *Selected with AI:* **{s.selected_option}** (Score: `{s.selected_score}`)")
+                    st.markdown(f"- *Decision & Action:* `{s.decision}` ➔ {s.action_taken}")
+

@@ -44,13 +44,13 @@ if %errorlevel% neq 0 (
 cd ..\..
 
 if not exist releases mkdir releases
-copy /y "mobile\android\app\build\outputs\apk\debug\app-debug.apk" "releases\jev-ai-flow-v1.0.0-debug.apk"
-copy /y "mobile\android\app\build\outputs\bundle\release\app-release.aab" "releases\jev-ai-flow-v1.0.0-release.aab"
+copy /y "mobile\android\app\build\outputs\apk\debug\app-debug.apk" "releases\jev-ai-flow-v1.0.5-debug.apk"
+copy /y "mobile\android\app\build\outputs\bundle\release\app-release.aab" "releases\jev-ai-flow-v1.0.5-release.aab"
 
 echo.
 echo ========================================================
 echo   SUCCESS! Binaries generated in .\releases\
-echo   - Debug APK: releases\jev-ai-flow-v1.0.0-debug.apk
-echo   - Signed AAB: releases\jev-ai-flow-v1.0.0-release.aab
+echo   - Debug APK: releases\jev-ai-flow-v1.0.5-debug.apk
+echo   - Signed AAB: releases\jev-ai-flow-v1.0.5-release.aab
 echo ========================================================
 pause

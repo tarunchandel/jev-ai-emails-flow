@@ -113,6 +113,26 @@ class HumanInTheLoopItem(BaseModel):
     )
 
 
+class AuditTrailStep(BaseModel):
+    """Structured audit trail step recording decision, options, and actions."""
+
+    step: int
+    stage: str
+    name: str
+    primitive: str = ""
+    question: str = ""
+    options: List[Dict[str, Any]] = Field(default_factory=list)
+    selected_option: str = ""
+    selected_score: str = ""
+    scores: Dict[str, Any] = Field(default_factory=dict)
+    decision: str = ""
+    action_taken: str = ""
+    latency_ms: float = 0.0
+    timestamp: str = Field(
+        default_factory=lambda: datetime.now(timezone.utc).isoformat()
+    )
+
+
 class CorporateActionFlowResult(BaseModel):
     """End-to-end execution record for the Corporate Action Email Flow."""
 
@@ -130,6 +150,7 @@ class CorporateActionFlowResult(BaseModel):
     processed_at: str = Field(
         default_factory=lambda: datetime.now(timezone.utc).isoformat()
     )
+    audit_trail: List[AuditTrailStep] = Field(default_factory=list)
 
 
 class JevDecisionDetails(BaseModel):
