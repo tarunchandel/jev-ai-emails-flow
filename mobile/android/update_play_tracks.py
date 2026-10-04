@@ -8,9 +8,9 @@ from google.auth.transport.requests import Request
 
 PACKAGE_NAME = "com.genaiapps.jevaiflow"
 KEY_FILE = r"mobile/android/google-play.json"
-AAB_FILE = r"releases/jev-ai-flow-v1.0.3-release.aab"
-TARGET_VERSION_CODE = 4
-TARGET_VERSION_NAME = "1.0.3"
+AAB_FILE = r"releases/jev-ai-flow-v1.0.4-release.aab"
+TARGET_VERSION_CODE = 5
+TARGET_VERSION_NAME = "1.0.4"
 SCOPES = ["https://www.googleapis.com/auth/androidpublisher"]
 
 def get_auth_token():
@@ -91,11 +91,11 @@ def deploy_to_play_store():
     release_notes = [
         {
             "language": "en-US",
-            "text": f"Jev AI Corporate Actions v{TARGET_VERSION_NAME}: Added light/dark theme switch, smooth animated bottom navigation, interactive toast notifications, debounced search filters, and SLA latency metrics."
+            "text": f"Jev AI Corporate Actions v{TARGET_VERSION_NAME}: Fixed app launcher icon and adaptive icons across all Android devices, updated splash screen branding, and refreshed web assets."
         },
         {
             "language": "en-GB",
-            "text": f"Jev AI Corporate Actions v{TARGET_VERSION_NAME}: Added light/dark theme switch, smooth animated bottom navigation, interactive toast notifications, debounced search filters, and SLA latency metrics."
+            "text": f"Jev AI Corporate Actions v{TARGET_VERSION_NAME}: Fixed app launcher icon and adaptive icons across all Android devices, updated splash screen branding, and refreshed web assets."
         }
     ]
 

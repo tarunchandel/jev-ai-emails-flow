@@ -1,7 +1,7 @@
 {
   "name": "jev-ai-flow-mobile",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Jev AI Corporate Actions & Email Automation Mobile Demo",
   "type": "module",
   "scripts": {
